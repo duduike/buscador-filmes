@@ -1,0 +1,38 @@
+.header {
+    padding: 1rem;
+    
+    .header-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .header-search {
+            display: flex;
+            gap: .5rem;
+            width: 35%;
+
+            .header-search__input {
+                width: 80%;
+                padding: .5rem;
+                border-radius: 3px;
+                background-color: $input;
+                color: $white;
+            }
+            .header-search__input:focus {
+                filter: brightness(120%);
+            }
+            
+            .header-search__button {
+                padding: .5rem;
+                border-radius: 5px;
+                background-color: $button;
+                color: $white;
+                cursor: pointer;
+
+            }
+            .header-search__button:hover{
+                filter: brightness(90%);
+            }
+        }
+    }
+}

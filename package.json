@@ -1,0 +1,12 @@
+{
+  "name": "tmdb-filmes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss/styles.scss:assets/scss/dist/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

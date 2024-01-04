@@ -1,0 +1,8 @@
+@import 'abstract/variables';
+@import 'abstract/utilities';
+@import 'components/header';
+@import 'components/movies';
+@import 'components/footer';
+@include reset;
+@include container;
+@include global;
