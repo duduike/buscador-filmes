@@ -1,5 +1,20 @@
+const searchForm = document.getElementById('searchForm');
 
-const createMovieElement = (movie) => {
+searchForm.onsubmit = (ev) => {
+    ev.preventDefault();
+    
+    const search = ev.target.searchMovie.value;
+
+    console.log(search);
+
+    if (search == '') {
+        alert('Preencha o campo');
+        return;
+    }
+}
+
+
+const createMovieItem = (movie) => {
     const movieElement = document.createElement('div');
     movieElement.className = 'movies-item' 
     movieElement.innerHTML = `
@@ -14,7 +29,7 @@ const updateMoviesContainer = (tmdbData) => {
     moviesContainer.innerHTML = '';
 
     tmdbData.results.forEach(movie => {
-        const movieElement = createMovieElement(movie);
+        const movieElement = createMovieItem(movie);
         moviesContainer.appendChild(movieElement);
     });
 };
@@ -22,7 +37,6 @@ const updateMoviesContainer = (tmdbData) => {
 (async () => {
     try {
         const tmdbData = await fetchingTmdbData();
-        console.log(tmdbData)
         updateMoviesContainer(tmdbData);
 
     } catch (error) {
